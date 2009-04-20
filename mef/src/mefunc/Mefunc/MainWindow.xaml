@@ -1,0 +1,22 @@
+﻿<Window x:Class="Mefunc.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="480" Width="640"
+    x:Name="Root">
+    <Grid TextElement.FontSize="24">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <TextBox Margin="5" Name="XTextBox" />
+        <TextBox Grid.Column="1" Margin="5" Name="YTextBox"/>
+        <ComboBox Grid.Column="1" Margin="5" Grid.Row="1" Name="OperationComboBox" DisplayMemberPath="Metadata[Name]" ItemsSource="{Binding Functions, ElementName=Root}" />
+        <Button Margin="5" Grid.Row="1" Name="ApplyButton" Content="Apply" Click="OnApplyClicked"  />
+        <TextBox Grid.ColumnSpan="2" Margin="5" Grid.Row="2" Name="ResultTextBox" />
+    </Grid>
+</Window>

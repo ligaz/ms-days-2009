@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Prismudio.Modules.CodeConsole.CodeConsoleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:codeConsole="clr-namespace:Prismudio.Modules.CodeConsole"
+    xmlns:commands="clr-namespace:Microsoft.Practices.Composite.Presentation.Commands;assembly=Microsoft.Practices.Composite.Presentation">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <codeConsole:CodeViewer Grid.ColumnSpan="2" x:Name="CodeViewer" />
+        <codeConsole:CodeEditor Grid.Row="1" x:Name="CodeEditor" />
+      
+        <Button Content="Execute" commands:Click.Command="{Binding Path=ExecuteCodeCommand}" Grid.Row="1" Grid.Column="1" />
+    </Grid>
+</UserControl>

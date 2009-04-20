@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Prismudio.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="clr-namespace:Prismudio.Core;assembly=Prismudio.Core"
+    xmlns:prism="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation">
+    <UserControl.Resources>
+        <core:RegionNames x:Key="RegionNames" />
+        <Style TargetType="ContentControl" x:Key="StretchedContentControlStyle">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <ContentControl prism:RegionManager.RegionName="{Binding Path=CodeConsoleRegion, Source={StaticResource RegionNames}}" Style="{StaticResource StretchedContentControlStyle}" />
+        <ContentControl prism:RegionManager.RegionName="{Binding Path=XamlViewerRegion, Source={StaticResource RegionNames}}" Grid.Column="1" Style="{StaticResource StretchedContentControlStyle}" />
+        <ContentControl prism:RegionManager.RegionName="{Binding Path=XamlEditorRegion, Source={StaticResource RegionNames}}" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource StretchedContentControlStyle}" />
+    </Grid>
+</UserControl>

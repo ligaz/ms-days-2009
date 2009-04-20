@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IronPython.Modules</name>
+    </assembly>
+    <members>
+        <member name="M:IronPython.Modules.PythonCollections.deque.WalkDeque(IronPython.Modules.PythonCollections.deque.DequeWalker)">
+            <summary>
+            Walks the queue calling back to the specified delegate for
+            each populated index in the queue.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonCopyReg.EnsureCallable(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.String)">
+            <summary>
+            Throw TypeError with a specified message if object isn't callable.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonCopyReg.GetCode(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Convert object to ushort, throwing ValueError on overflow.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonPickle.IFileInput">
+            <summary>
+            Interface for "file-like objects" that implement the protocol needed by load() and friends.
+            This enables the creation of thin wrappers that make fast .NET types and slow Python types look the same.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonPickle.IFileOutput">
+            <summary>
+            Interface for "file-like objects" that implement the protocol needed by dump() and friends.
+            This enables the creation of thin wrappers that make fast .NET types and slow Python types look the same.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.SaveObject(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Call the appropriate reduce method for obj and pickle the object using
+            the resulting data. Use the first available of
+            copy_reg.dispatch_table[type(obj)], obj.__reduce_ex__, and obj.__reduce__.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.SaveReduce(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            Pickle the result of a reduce function.
+            
+            Only context, obj, func, and reduceCallable are required; all other arguments may be null.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteFloatAsString(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle decimalnl_short format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteFloat64(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle float8 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteUInt8(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle uint1 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteUInt16(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle uint2 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteInt32(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle int4 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteIntAsString(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle decimalnl_short format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteLongAsString(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle decimalnl_long format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteUnicodeStringRaw(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle unicodestringnl format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteUnicodeStringUtf8(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Write value in pickle unicodestring4 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.WriteStringPair(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.Object)">
+            <summary>
+            Write value in pickle stringnl_noescape_pair format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.IsUInt8(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Return true if value is appropriate for formatting in pickle uint1 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.IsUInt16(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Return true if value is appropriate for formatting in pickle uint2 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.IsInt32(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Return true if value is appropriate for formatting in pickle int4 format.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.IsPrintableAscii(System.Object)">
+            <summary>
+            Return true if value is a string where each value is in the range of printable ASCII characters.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.BatchAppends(Microsoft.Scripting.Runtime.CodeContext,System.Collections.IEnumerator)">
+            <summary>
+            Emit a series of opcodes that will set append all items indexed by iter
+            to the object at the top of the stack. Use APPENDS if possible, but
+            append no more than BatchSize items at a time.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.BatchSetItems(Microsoft.Scripting.Runtime.CodeContext,System.Collections.IEnumerator)">
+            <summary>
+            Emit a series of opcodes that will set all (key, value) pairs indexed by
+            iter in the object at the top of the stack. Use SETITEMS if possible,
+            but append no more than BatchSize items at a time.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Pickler.FindModuleForGlobal(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.Object)">
+            <summary>
+            Find the module for obj and ensure that obj is reachable in that module by the given name.
+            
+            Throw PicklingError if any of the following are true:
+             - The module couldn't be determined.
+             - The module couldn't be loaded.
+             - The given name doesn't exist in the module.
+             - The given name is a different object than obj.
+            
+            Otherwise, return the name of the module.
+            
+            To determine which module obj lives in, obj.__module__ is used if available. The
+            module named by obj.__module__ is loaded if needed. If obj has no __module__
+            attribute, then each loaded module is searched. If a loaded module has an
+            attribute with the given name, and that attribute is the same object as obj,
+            then that module is used.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonPickle.Unpickler.SetItems(IronPython.Runtime.PythonDictionary,System.Int32)">
+            <summary>
+            Interpret everything from markIndex to the top of the stack as a sequence
+            of key, value, key, value, etc. Set dict[key] = value for each. Pop
+            everything from markIndex up when done.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonDateTime.date.CheckType(System.Object)">
+            <summary>
+            Used to check the type to see if we can do a comparison.  Returns true if we can
+            or false if we should return NotImplemented.  May throw if the type's really wrong.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonDateTime.time.CompareTo(System.Object)">
+            <summary>
+            Helper function for doing the comparisons.  time has no __cmp__ method
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonIterTools.IterBase">
+            <summary>
+            Base class used for iterator wrappers.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonLocale.LocaleInfo.CreateConventionsDict">
+            <summary>
+            Popupates the given directory w/ the locale information from the given
+            CultureInfo.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonNT.access(Microsoft.Scripting.Runtime.CodeContext,System.String,System.Int32)">
+            <summary>
+            Checks for the specific permissions, provided by the mode parameter, are available for the provided path.  Permissions can be:
+            
+            F_OK: Check to see if the file exists
+            R_OK | W_OK | X_OK: Check for the specific permissions.  Only W_OK is respected.
+            </summary>
+        </member>
+        <member name="F:IronPython.Modules.PythonNT.environ">
+            <summary>
+            single instance of environment dictionary is shared between multiple runtimes because the environment
+            is shared by multiple runtimes.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonNT.SetEnvironment(System.Collections.Specialized.StringDictionary,System.Object)">
+            <summary>
+            Copy elements from a Python mapping of dict environment variables to a StringDictionary.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonNT.ArgumentsToString(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Convert a sequence of args to a string suitable for using to spawn a process.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonRegex">
+            <summary>
+            Python regular expression module.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonRegex.PreParseRegex(Microsoft.Scripting.Runtime.CodeContext,System.String)">
+            <summary>
+            Preparses a regular expression text returning a ParsedRegex class
+            that can be used for further regular expressions.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonRegex.RE_Pattern">
+            <summary>
+            Compiled reg-ex pattern
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSelect.ProcessSocketSequence(Microsoft.Scripting.Runtime.CodeContext,System.Object,IronPython.Runtime.List@,System.Collections.Generic.Dictionary{System.Net.Sockets.Socket,System.Object}@)">
+            <summary>
+            Process a sequence of objects that are compatible with ObjectToSocket(). Return two
+            things as out params: an in-order List of sockets that correspond to the original
+            objects in the passed-in sequence, and a mapping of these socket objects to their
+            original objects.
+            
+            The socketToOriginal mapping is generated because the CPython select module supports
+            passing to select either file descriptor numbers or an object with a fileno() method.
+            We try to be faithful to what was originally requested when we return.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSelect.ObjectToSocket(Microsoft.Scripting.Runtime.CodeContext,System.Object)">
+            <summary>
+            Return the System.Net.Sockets.Socket object that corresponds to the passed-in
+            object. obj can be a System.Net.Sockets.Socket, a PythonSocket.SocketObj, a
+            long integer (representing a socket handle), or a Python object with a fileno()
+            method (whose result is used to look up an existing PythonSocket.SocketObj,
+            which is in turn converted to a Socket.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.SignInsensitiveToInt32(System.Object)">
+            <summary>
+            Convert an object to a 32-bit integer. This adds two features to Converter.ToInt32:
+              1. Sign is ignored. For example, 0xffff0000 converts to 4294901760, where Convert.ToInt32
+                 would throw because 0xffff000 is less than zero.
+              2. Overflow exceptions are thrown. Converter.ToInt32 throws TypeError if x is
+                 an integer, but is bigger than 32 bits. Instead, we throw OverflowException.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.SignInsensitiveToInt16(System.Object)">
+            <summary>
+            Convert an object to a 16-bit integer. This adds two features to Converter.ToInt16:
+              1. Sign is ignored. For example, 0xff00 converts to 65280, where Convert.ToInt16
+                 would throw because signed 0xff00 is -256.
+              2. Overflow exceptions are thrown. Converter.ToInt16 throws TypeError if x is
+                 an integer, but is bigger than 16 bits. Instead, we throw OverflowException.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.MakeException(Microsoft.Scripting.Runtime.CodeContext,System.Exception)">
+            <summary>
+            Return a standard socket exception (socket.error) whose message and error code come from a SocketException
+            This will eventually be enhanced to generate the correct error type (error, herror, gaierror) based on the error code.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.IPv6BytesToColonHex(System.Byte[])">
+            <summary>
+            Convert an IPv6 address byte array to a string in standard colon-hex notation.
+            The .NET IPAddress.ToString() method uses dotted-quad for the last 32 bits,
+            which differs from the normal Python implementation (but is allowed by the IETF);
+            this method returns the standard (no dotted-quad) colon-hex form.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.ConvertSpecialAddresses(System.String)">
+            <summary>
+            Handle conversion of "" to INADDR_ANY and "&lt;broadcast&gt;" to INADDR_BROADCAST.
+            Otherwise returns host unchanged.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.HostToAddress(Microsoft.Scripting.Runtime.CodeContext,System.String,System.Net.Sockets.AddressFamily)">
+            <summary>
+            Return the IP address associated with host, with optional address family checking.
+            host may be either a name or an IP address (in string form).
+            
+            If family is non-null, a gaierror will be thrown if the host's address family is
+            not the same as the specified family. gaierror is also raised if the hostname cannot be
+            converted to an IP address (e.g. through a name lookup failure).
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.HostToAddresses(Microsoft.Scripting.Runtime.CodeContext,System.String,System.Net.Sockets.AddressFamily)">
+            <summary>
+            Return the IP address associated with host, with optional address family checking.
+            host may be either a name or an IP address (in string form).
+            
+            If family is non-null, a gaierror will be thrown if the host's address family is
+            not the same as the specified family. gaierror is also raised if the hostname cannot be
+            converted to an IP address (e.g. through a name lookup failure).
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.RemoveLocalDomain(System.String)">
+            <summary>
+            Return fqdn, but with its domain removed if it's on the same domain as the local machine.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.TupleToEndPoint(Microsoft.Scripting.Runtime.CodeContext,IronPython.Runtime.PythonTuple,System.Net.Sockets.AddressFamily,System.String@)">
+            <summary>
+            Convert a (host, port) tuple [IPv4] (host, port, flowinfo, scopeid) tuple [IPv6]
+            to its corresponding IPEndPoint.
+            
+            Throws gaierror if host is not a valid address.
+            Throws ArgumentTypeException if any of the following are true:
+             - address does not have exactly two elements
+             - address[0] is not a string
+             - address[1] is not an int
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.EndPointToTuple(System.Net.IPEndPoint)">
+            <summary>
+            Convert an IPEndPoint to its corresponding (host, port) [IPv4] or (host, port, flowinfo, scopeid) [IPv6] tuple.
+            Throws SocketException if the address family is other than IPv4 or IPv6.
+            </summary>
+        </member>
+        <member name="F:IronPython.Modules.PythonSocket.socket._handleToSocket">
+            <summary>
+            handleToSocket allows us to translate from Python's idea of a socket resource (file
+            descriptor numbers) to .NET's idea of a socket resource (System.Net.Socket objects).
+            In particular, this allows the select module to convert file numbers (as returned by
+            fileno()) and convert them to Socket objects so that it can do something useful with them.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.socket.HandleToSocket(System.Int64)">
+            <summary>
+            Return the internal System.Net.Sockets.Socket socket object associated with the given
+            handle (as returned by GetHandle()), or null if no corresponding socket exists. This is
+            primarily intended to be used by other modules (such as select) that implement
+            networking primitives. User code should not normally need to call this function.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.socket.#ctor(Microsoft.Scripting.Runtime.CodeContext,System.Net.Sockets.Socket)">
+            <summary>
+            Create a Python socket object from an existing .NET socket object
+            (like one returned from Socket.Accept())
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonSocket.socket.Initialize(Microsoft.Scripting.Runtime.CodeContext,System.Net.Sockets.Socket)">
+            <summary>
+            Perform initialization common to all constructors
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonStruct.FormatType">
+            <summary>
+            Enum which specifies the format type for a compiled struct
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonStruct.Format">
+            <summary>
+            Struct used to store the format and the number of times it should be repeated.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonThread._local.ThreadLocalDictionaryStorage">
+            <summary>
+            Provides a dictionary storage implementation whose storage is local to
+            the thread.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.PythonTime.FoundDateComponents">
+            <summary>
+            Represents the date components that we found while parsing the date.  Used for zeroing out values
+            which have different defaults from CPython.  Currently we only know that we need to do this for
+            the year.
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.xxsubtype">
+            <summary>
+            Samples on how to subtype built-in types from C#
+            </summary>
+        </member>
+        <member name="F:IronPython.Modules.xxsubtype.spamlist.state">
+            <summary>
+            an int variable for demonstration purposes
+            </summary>
+        </member>
+        <member name="F:IronPython.Modules.xxsubtype.spamdict.state">
+            <summary>
+            an int variable for demonstration purposes
+            </summary>
+        </member>
+        <member name="T:IronPython.Modules.FunctionTools.partial">
+            <summary>
+            Returns a new callable object with the provided initial set of arguments
+            bound to it.  Calling the new function then appends to the additional
+            user provided arguments.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.#ctor(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.Object[])">
+            <summary>
+            Creates a new partial object with the provided positional arguments.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.#ctor(Microsoft.Scripting.Runtime.CodeContext,System.Object,Microsoft.Scripting.IAttributesCollection,System.Object[])">
+            <summary>
+            Creates a new partial object with the provided positional and keyword arguments.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.Call(Microsoft.Scripting.Runtime.CodeContext,System.Object[])">
+            <summary>
+            Calls func with the previously provided arguments and more positional arguments.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.Call(Microsoft.Scripting.Runtime.CodeContext,Microsoft.Scripting.IAttributesCollection,System.Object[])">
+            <summary>
+            Calls func with the previously provided arguments and more positional arguments and keyword arguments.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.SetMemberAfter(Microsoft.Scripting.Runtime.CodeContext,System.String,System.Object)">
+            <summary>
+            Operator method to set arbitrary members on the partial object.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.GetBoundMember(Microsoft.Scripting.Runtime.CodeContext,System.String)">
+            <summary>
+            Operator method to get additional arbitrary members defined on the partial object.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.FunctionTools.partial.DeleteMember(Microsoft.Scripting.Runtime.CodeContext,System.String)">
+            <summary>
+            Operator method to delete arbitrary members defined in the partial object.
+            </summary>
+        </member>
+        <member name="P:IronPython.Modules.FunctionTools.partial.func">
+            <summary>
+            Gets the function which will be called
+            </summary>
+        </member>
+        <member name="P:IronPython.Modules.FunctionTools.partial.args">
+            <summary>
+            Gets the initially provided positional arguments.
+            </summary>
+        </member>
+        <member name="P:IronPython.Modules.FunctionTools.partial.keywords">
+            <summary>
+            Gets the initially provided keyword arguments or None.
+            </summary>
+        </member>
+        <member name="P:IronPython.Modules.FunctionTools.partial.__dict__">
+            <summary>
+            Gets or sets the dictionary used for storing extra attributes on the partial object.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonWeakRef.ref.RefEquals(Microsoft.Scripting.Runtime.CodeContext,System.Object,System.Object)">
+            <summary>
+            Special equals because none of the special cases in Ops.Equals
+            are applicable here, and the reference equality check breaks some tests.
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonWeakRef.weakproxy.GetObject">
+            <summary>
+            gets the object or throws a reference exception
+            </summary>
+        </member>
+        <member name="M:IronPython.Modules.PythonWeakRef.weakcallableproxy.GetObject">
+            <summary>
+            gets the object or throws a reference exception
+            </summary>
+        </member>
+    </members>
+</doc>
